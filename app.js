@@ -22,7 +22,8 @@ const mongoose = require("mongoose");
 // 	useUnifiedTopology: true
 // })
 
-mongoose.connect("mongodb+srv://Ellery-Lee:Li19980503@cluster0.uwfna.mongodb.net/<dbname>?retryWrites=true&w=majority", {
+//for secret security, changed username and keyword below
+mongoose.connect("mongodb+srv://<username>:<password>@cluster0.uwfna.mongodb.net/<dbname>?retryWrites=true&w=majority", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 })
