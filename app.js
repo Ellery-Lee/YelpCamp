@@ -8,7 +8,8 @@ var User = require("./models/user");
 var seedDB = require("./seeds");
 var passport = require("passport");
 var LocalStrategy = require("passport-local");
-var methodOverride = require("method-override")
+var methodOverride = require("method-override");
+var port = process.env.PORT || 3000;
 
 //requiring routes 
 var commentRoutes = require("./routes/comments");
@@ -59,6 +60,6 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/", indexRoutes);
 
-app.listen(3000, function(){
-	console.log("The YelpCamp sever has started!!!");
+app.listen(port, function(){
+	console.log("Server Has Started!");
 });
