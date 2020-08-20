@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
@@ -10,6 +12,8 @@ var passport = require("passport");
 var LocalStrategy = require("passport-local");
 var methodOverride = require("method-override");
 var port = process.env.PORT || 3000;
+
+console.log(process.env.GEOCODER_API_KEY);
 
 //requiring routes 
 var commentRoutes = require("./routes/comments");
